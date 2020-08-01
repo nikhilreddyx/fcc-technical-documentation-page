@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Reddy</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>HTML</header>
+        <ul>
+           <li><a class="nav-link" href="#Introduction">Introduction</a></li><br>
+           <li><a class="nav-link" href="#Prerequisites">Prerequisites</a></li><br>
+           <li><a class="nav-link" href="#Anatomy_of_an_HTML_element">Anatomy of an HTML element</a></li><br>
+           <li><a class="nav-link" href="#Nesting_elements">Nesting elements</a></li><br>
+           <li><a class="nav-link" href="#Block_versus_inline_elements">Block versus inline elements</a></li><br>
+           <li><a class="nav-link" href="#Empty_elements">Empty elements</a></li><br>
+           <li><a class="nav-link" href="#Conclusion">Conclusion</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>HTML (Hypertext Markup Language) is not a programming language. It is a markup language that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML consists of a series of elements, which you use to enclose, wrap, or mark up different parts of content to make it appear or act in a certain way. The enclosing tags can make content into a hyperlink to connect to another page, italicize words, and so on.</p>
+        </section>
+        <section class="main-section" id="Prerequisites">
+              <header>Prerequisites</header>
+              <p>Before starting this module, you don't need any previous HTML knowledge, but you should have at least basic familiarity with using computers and using the web passively (i.e., just looking at it and consuming content). You should have a basic work environment set up (as detailed in Installing basic software), and understand how to create and manage files (as detailed in Dealing with files). Both are parts of our Getting started with the web complete beginner's module.</p>
+        </section>
+        <section class="main-section" id="Anatomy_of_an_HTML_element">
+            <header>Anatomy of an HTML element</header>
+            <p>The anatomy of our element is:</p>
+            <ul>
+                <li><strong>The opening tag:</strong> This consists of the name of the element (in this example, p for paragraph), wrapped in opening and closing angle brackets. This opening tag marks where the element begins or starts to take effect. In this example, it precedes the start of the paragraph text.</li>
+                <li><strong>The content:</strong> This is the content of the element. In this example, it is the paragraph text.</li>
+                <li><strong>The closing tag:</strong> This is the same as the opening tag, except that it includes a forward slash before the element name. This marks where the element ends. Failing to include a closing tag is a common beginner error that can produce peculiar results.</li>
+            </ul>
+        </section>
+        <section class="main-section" id="Nesting_elements">
+            <header>Nesting elements</header>
+            <p>Elements can be placed within other elements. This is called nesting. If we wanted to state that our cat is very grumpy, we could wrap the word very in a &lt; strong &gt; element, which means that the word is to have strong(er) text formatting:</p>
+            <ul>
+                <li><code>&lt;p&gt;My cat is &lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;/p&gt;</code></li>
+            </ul>
+            <p>There is a right and wrong way to do nesting. In the example above, we opened the p element first, then opened the strong element. For proper nesting, we should close the strong element first, before closing the p.</p>
+            <p>The following is an example of the wrong way to do nesting:</p>
+            <ul>
+                <li><code>&lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt;</code></li>
+            </ul>
+            <p>The tags have to open and close in a way that they are inside or outside one another. With the kind of overlap in the example above, the browser has to guess at your intent. This kind of guessing can result in unexpected results.</p>
+        </section>
+        <section class="main-section" id="Block_versus_inline_elements">
+            <header>Block versus inline elements</header>
+            <p>There are two important categories of elements to know in HTML: block-level elements and inline elements.</p>
+            <ol>
+                <li>Block-level elements form a visible block on a page. A block-level element appears on a new line following the content that precedes it. Any content that follows a block-level element also appears on a new line. Block-level elements are usually structural elements on the page. For example, a block-level element might represent paragraphs, lists, navigation menus, or footers. A block-level element wouldn't be nested inside an inline element, but it might be nested inside another block-level element.</li>
+                <li>Inline elements are contained within block-level elements, and surround only small parts of the document’s content. (not entire paragraphs or groupings of content) An inline element will not cause a new line to appear in the document. It is typically used with text. For example, as an <a> element (hyperlink) or emphasis elements such as &lt;em&gt; or &lt;strong&gt;.</li>
+            </ol>
+            <p>Consider the following example:</p>
+            <ul>
+                <li><code>&lt;em&gt;first&lt;/em&gt;&lt;em&gt;second&lt;/em&gt;&lt;em&gt;third&lt;/em&gt;</code></li>
+                <li></li>
+                <li><code>&lt;p&gt;fourth&lt;/p&gt;&lt;p&gt;fifth&lt;/p&gt;&lt;p&gt;sixth&lt;/p&gt;<code></li>
+            </ul>
+            <p>&lt;em&gt; is an inline element. As you see below, the first three elements sit on the same line, with no space in between. On the other hand, &lt;p&gt; is a block-level element. Each p element appears on a new line, with space above and below. (The spacing is due to default CSS styling that the browser applies to paragraphs.)</p>
+            <ul>
+                <li>firstsecondthird</li>
+                <li>fourth</li>
+                <li>fifth</li>
+                <li>sixth</li>
+            </ul>
+        </section>
+        <section class="main-section" id="Empty_elements">
+            <header>Empty elements</header>
+            <p>Not all elements follow the pattern of an opening tag, content, and a closing tag. Some elements consist of a single tag, which is typically used to insert/embed something in the document. For example, the &lt;img&gt; element embeds an image file onto a page:</p>
+            <ul>
+               <li><code>&lt;img src="" alt=""&gt;</code></li> 
+            </ul>
+        </section>
+        <section class="main-section" id="Conclusion">
+            <header>Conclusion</header>
+            <p>Here, we have only really scratched the surface of HTML. To find out more, go to our <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN docs</a> on html topic.</p>
+        </section>
+    </main>
+</body>
+</html>
